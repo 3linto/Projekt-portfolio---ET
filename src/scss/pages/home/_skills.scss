@@ -1,0 +1,46 @@
+//@use '../../layout/layout';
+
+.skills {
+    //@include layout.default;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-ocean);
+
+    &__container {
+        grid-column: inner;
+    }
+
+    &__skills {
+        display: flex;
+        justify-content: center;
+        gap: var(--gap-content);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h5 {
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            color: var(--color-dull-blue);
+        }
+    }
+
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        background-color: var(--color-sandy);
+        border-radius: 50%;
+    }
+    
+
+}

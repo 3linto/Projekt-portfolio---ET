@@ -1,0 +1,9 @@
+@mixin default($col: inner) {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    padding: var(--section-gap) 0; //detta e ovanför sektioner
+    
+    &__inner {
+        grid-column: $col;
+    }
+}

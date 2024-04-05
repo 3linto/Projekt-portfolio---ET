@@ -1,0 +1,98 @@
+//@use 'layout';
+//@use '../utilities/responsive';
+
+.site-header {
+    //@include layout.default;
+    padding: 1rem 2rem;
+    //height: 80px;
+    background-color: #fff;
+    display: grid;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        background: #BB7A7E;
+        border: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+
+        svg {
+            height: 17px;
+            width: 17px;
+            fill: #fff;
+        }
+    }
+
+    .menu {
+        
+        &__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+        }
+
+        &__item {
+            text-transform: uppercase;
+            
+            &--current {
+                font-weight: 700;
+                border-bottom: 3px solid var(--color-sandy);
+                a {
+                    color: var(--color-sandy);
+                }
+            }
+        }
+        
+
+        &__link {
+            text-decoration: none;
+            color: #000;
+        }
+
+    }
+}
+
+.hero {
+    position: relative;
+    padding-top: 8rem;
+    min-height: 100vh;
+    background-image: url(assets/images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 50rem;
+        text-align: left;
+    }
+}
