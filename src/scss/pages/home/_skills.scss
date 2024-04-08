@@ -5,15 +5,30 @@
     display: grid;
     grid-template-columns: var(--grid-container);
     background-color: var(--color-ocean);
+    padding: 8rem 0 8rem 0;
 
     &__container {
         grid-column: inner;
     }
 
+    &__header {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3rem;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        border-bottom: 2px solid var(--color-sandy);
+        display: inline-flex;
+    }
+
     &__skills {
         display: flex;
         justify-content: center;
-        gap: var(--gap-content);
+        gap: 5.125rem;
     }
 
     &__content {
@@ -21,11 +36,12 @@
         flex-direction: column;
         align-items: center;
 
-        h5 {
+        h4 {
             color: white;
         }
 
         p {
+            max-width: 20.375rem;
             text-align: center;
             color: var(--color-dull-blue);
         }

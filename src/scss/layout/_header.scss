@@ -1,5 +1,6 @@
 //@use 'layout';
 //@use '../utilities/responsive';
+@use '../components/buttons';
 
 .site-header {
     //@include layout.default;
@@ -25,17 +26,7 @@
     }
 
     .button {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: #fff;
-        background: #BB7A7E;
-        border: none;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        padding: 1rem 1.5rem;
-        text-decoration: none;
+        @include buttons.default;
 
         svg {
             height: 17px;
@@ -82,7 +73,6 @@
     background-image: url(assets/images/hero.jpg);
     background-size: cover;
     background-position: center;
-
 
     &__inner {
         position: relative;

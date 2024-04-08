@@ -1,0 +1,33 @@
+@use '../components/buttons';
+
+.contact {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-ice);
+    padding: 8rem 0 12.688rem 0;
+
+    &__inner {
+        grid-column: inner;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 10.75rem;
+    }
+
+    .button {
+        @include buttons.default;
+    
+        svg {
+            height: 17px;
+            width: 17px;
+            fill: #fff;
+        }
+    }
+
+    &__text {
+        max-width: 25.625rem;
+    }
+
+}

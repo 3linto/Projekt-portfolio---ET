@@ -1,15 +1,23 @@
 .about {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-ice);
+    padding: 8rem 0 8rem 0;
+    border-top: 1px solid var(--color-ice-blue);
+
 
     &__inner {
-
+        grid-column: inner;
     }
 
     &__container {
         display: flex;
+        justify-content: center;
+        gap: 9.375rem;
     }
 
     &__image {
-
+        flex: 1;
 
         img {
             height: 100%;
@@ -26,6 +34,10 @@
         border-bottom: 2px solid var(--color-sandy);
         position: relative;
         display: inline-flex;
+    }
+
+    &__text {
+        max-width: 34.688rem;
     }
 
 }
