@@ -1,0 +1,26 @@
+@use '../../layout/layout';
+
+.hero {
+    @include layout.default;
+    background-image: url(assets/images/hero.jpg);
+    background-size: cover;
+    min-height: 100vh;
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 5rem;
+        left: -5rem;
+    }
+
+    &__content {
+        max-width: 50rem;
+        text-align: left;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+    }
+}

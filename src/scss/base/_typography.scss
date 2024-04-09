@@ -1,5 +1,8 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -26,18 +29,10 @@ h6 {
     font-size: var(--font-size-1);
 }
 
-a {
-    line-height: var(--line-height);
-}
-
-p {
-    line-height: var(--line-height);
-}
-
-blockquote {
-    line-height: var(--line-height);
-}
-
+a,
+p,
+blockquote,
 li {
     line-height: var(--line-height);
+    font-size: 16px;
 }

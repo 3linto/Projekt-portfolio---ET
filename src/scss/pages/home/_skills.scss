@@ -1,11 +1,8 @@
-//@use '../../layout/layout';
+@use '../../layout/layout';
 
 .skills {
-    //@include layout.default;
-    display: grid;
-    grid-template-columns: var(--grid-container);
+    @include layout.default;
     background-color: var(--color-ocean);
-    padding: 8rem 0 8rem 0;
 
     &__container {
         grid-column: inner;
@@ -14,14 +11,12 @@
     &__header {
         display: flex;
         justify-content: center;
-        padding-bottom: 3rem;
+        padding-bottom: var(--section-gap-inner);
     }
 
     &__title {
-        margin: 0;
-        padding: 0;
         color: #fff;
-        border-bottom: 2px solid var(--color-sandy);
+        border-bottom: 3px solid var(--color-sandy);
         display: inline-flex;
     }
 
@@ -38,6 +33,7 @@
 
         h4 {
             color: white;
+            padding-top: 2rem
         }
 
         p {

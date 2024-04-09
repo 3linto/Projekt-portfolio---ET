@@ -1,10 +1,7 @@
-.about {
-    display: grid;
-    grid-template-columns: var(--grid-container);
-    background-color: var(--color-ice);
-    padding: 8rem 0 8rem 0;
-    border-top: 1px solid var(--color-ice-blue);
+@use '../layout/layout';
 
+.about {
+    @include layout.default;
 
     &__inner {
         grid-column: inner;
@@ -22,22 +19,33 @@
         img {
             height: 100%;
             width: 100%;
+            object-fit: cover;
         }
     }
 
-    
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    &__header {
+        padding-bottom: 1.5rem;
     }
 
     &__title {
-        border-bottom: 2px solid var(--color-sandy);
+        border-bottom: 3px solid var(--color-sandy);
         position: relative;
         display: inline-flex;
     }
 
     &__text {
         max-width: 34.688rem;
+        
+        p {
+            margin: 0;
+            padding: 0;
+        }
     }
 
 }
