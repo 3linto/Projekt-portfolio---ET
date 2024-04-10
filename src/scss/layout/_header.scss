@@ -5,13 +5,13 @@
 .site-header {
     @include layout.default;
     padding: 0;
-    height: 128px;
-    background-color: #fff;
+    height: 8rem;
     display: grid;
     align-items: center;
     position: fixed;
     width: 100%;
     z-index: 999;
+    transition: .3s;
 
     &__inner {
         display: flex;
@@ -25,6 +25,11 @@
         gap: 2rem;
     }
 
+    &--scroll {
+        /* går även lägga till height: 80px pch 100px på header! */
+        background-color: white;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1);
+    }
 }
 
 .button {
@@ -54,11 +59,21 @@
     position: fixed;
     bottom: 4.25rem;
     right: 7.25rem;
+    transition: .2s;
 
     svg {
         background-color: var(--color-ice);
         border: 1px solid var(--color-ice);
         border-radius: 100%;
+    }
+
+    @include responsive.max(1024px) {
+        right: 2rem;
+    }
+
+    &--up {
+        
+        transform: rotate(180deg);
     }
 }
 

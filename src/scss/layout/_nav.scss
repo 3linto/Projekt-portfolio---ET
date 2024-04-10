@@ -14,10 +14,10 @@
         text-transform: uppercase;
         
         &--current {
-            font-weight: 700;
-            border-bottom: 3px solid var(--color-sandy);
+            font-weight: 800;
+            border-bottom: 3px solid var(--color-ocean);
             a {
-                color: var(--color-sandy);
+                color: var(--color-ocean);
             }
         }
     }

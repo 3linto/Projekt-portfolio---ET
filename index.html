@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <!-- Style/script -->
     <link rel="stylesheet" href="style.css">
+    <script src="js/headerScroll.js" defer></script>
 </head>
-<body>
+<body id="top">
 
     <div class="container">
 
@@ -30,17 +31,15 @@
                             <li class="menu__item menu__item--current"><a href="" class="menu__link">Hem</a></li>
                             <li class="menu__item"><a href="" class="menu__link">Om mig</a></li>
                             <li class="menu__item"><a href="" class="menu__link">Skills</a></li>
-                            <li class="menu__item"><a href="" class="menu__link">Portfolio</a></li>
-                            <li class="menu__item"><a href="" class="menu__link">Kontakt</a></li>
-                        </ul>
+                            <li class="menu__item"><a href="" class="menu__link">Portfolio</a></li>                        </ul>
                     </nav>
 
                     <div class="site-header__button">
                         <a href="" class="button">
                             Kontakta mig
-                            <svg width="58" height="46" viewBox="0 0 58 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.33341 45.6667C4.77508 45.6667 3.44153 45.1123 2.33275 44.0035C1.22397 42.8947 0.668637 41.5602 0.666748 40V6.00001C0.666748 4.44168 1.22208 3.10812 2.33275 1.99934C3.44341 0.890565 4.77697 0.335232 6.33341 0.333344H51.6667C53.2251 0.333344 54.5596 0.888676 55.6702 1.99934C56.7809 3.11001 57.3353 4.44357 57.3334 6.00001V40C57.3334 41.5583 56.779 42.8928 55.6702 44.0035C54.5615 45.1142 53.227 45.6686 51.6667 45.6667H6.33341ZM29.0001 25.8333L51.6667 11.6667V6.00001L29.0001 20.1667L6.33341 6.00001V11.6667L29.0001 25.8333Z"/>
-                            </svg> 
+                            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="white"/>
+                            </svg>
                         </a>                 
                     </div>
                     
@@ -49,9 +48,10 @@
                 <button class="menu-button">Menu</button>
 
                 <div class="top-button">
-                    <a href="" class="absolute w-24 h-24 bg-pinkish flex items-center justify-center -bottom-12">
-                        <svg width="50" height="50" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.5 24.0187L17.1562 18.675C16.7437 18.2625 16.2285 18.0562 15.6105 18.0562C14.9925 18.0562 14.4577 18.2625 14.0062 18.675C13.5562 19.125 13.3312 19.6597 13.3312 20.2792C13.3312 20.8987 13.5562 21.4327 14.0062 21.8812L20.925 28.8C21.375 29.25 21.9 29.475 22.5 29.475C23.1 29.475 23.625 29.25 24.075 28.8L31.05 21.825C31.5 21.375 31.7152 20.85 31.6957 20.25C31.6762 19.65 31.4422 19.125 30.9937 18.675C30.5437 18.2625 30.0187 18.0465 29.4187 18.027C28.8187 18.0075 28.2937 18.2235 27.8437 18.675L22.5 24.0187ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.045 8.60625 40.4422 6.58125 38.4187C4.55625 36.3937 2.9535 34.0125 1.773 31.275C0.5925 28.5375 0.0015 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.955 10.9875 4.55775 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.9535 13.725 1.773C16.4625 0.5925 19.3875 0.0015 22.5 0C25.6125 0 28.5375 0.591 31.275 1.773C34.0125 2.955 36.3937 4.55775 38.4187 6.58125C40.4437 8.60625 42.0472 10.9875 43.2292 13.725C44.4112 16.4625 45.0015 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.045 34.0125 40.4422 36.3937 38.4187 38.4187C36.3937 40.4437 34.0125 42.0472 31.275 43.2292C28.5375 44.4112 25.6125 45.0015 22.5 45Z" fill="#25475D"/>
+                    <a href="#top" class="absolute w-24 h-24 bg-pinkish flex items-center justify-center -bottom-12">
+                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="26" cy="26" r="26" fill="#25475D"/>
+                            <path d="M24.4735 38.5689C24.7411 38.8449 25.1041 39 25.4825 39C25.8609 39 26.2238 38.8449 26.4914 38.5689L34.5643 30.2388C34.7006 30.103 34.8094 29.9405 34.8841 29.7608C34.9589 29.5812 34.9983 29.388 34.9999 29.1924C35.0016 28.9969 34.9655 28.803 34.8937 28.6221C34.822 28.4411 34.716 28.2767 34.582 28.1384C34.448 28.0002 34.2887 27.8908 34.1133 27.8168C33.9379 27.7427 33.75 27.7055 33.5605 27.7072C33.371 27.7089 33.1838 27.7495 33.0097 27.8267C32.8356 27.9038 32.6781 28.016 32.5465 28.1567L26.9095 33.9731L26.9095 14.4725C26.9095 14.082 26.7592 13.7074 26.4916 13.4313C26.2239 13.1551 25.8609 13 25.4825 13C25.104 13 24.741 13.1551 24.4734 13.4313C24.2057 13.7074 24.0554 14.082 24.0554 14.4725L24.0554 33.9731L18.4185 28.1567C18.1493 27.8884 17.7888 27.74 17.4147 27.7434C17.0405 27.7467 16.6826 27.9016 16.418 28.1746C16.1534 28.4476 16.0033 28.8169 16.0001 29.203C15.9968 29.5891 16.1406 29.9611 16.4006 30.2388L24.4735 38.5689Z" fill="white"/>
                         </svg>
                     </a>
                 </div>
@@ -65,44 +65,156 @@
             <div class="hero__inner">
 
                 <div class="hero__content">
-                    <h1 class="hero__title">Hi, I'm Elin Thebrin</h1>
-                    <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolore ut quam cumque ipsa optio velit hic debitis a, unde aut, magnam quidem natus rerum at incidunt neque, voluptas vel dolorem. Quis obcaecati velit non ut, est esse! Officia omnis suscipit quis minus facere sunt in sed vitae. Velit, ipsa.</p>
-                    <a href="" class="button">
+                    <h1 class="hero__title">I'm Elin Thebrin</h1>
+                    <p class="hero__description">Webbdesigner, perfectionism freak and a lot of patience.</p>
+                    <!-- <a href="" class="button">
                         Portfolio
                         <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="white"/>
                         </svg>
-                    </a> 
+                    </a>  -->
+                    <div class="social__content">
+                        <ul class="social-media">
+                        <!-- PINTEREST -->
+                            <li class="social__item">
+                                <a href="https://pinterest.com" target="_blank" class="social__link">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.92366 24.0273C10.0837 24.3778 11.2557 24.5832 12.5003 24.5832C15.705 24.5832 18.7785 23.3101 21.0445 21.044C23.3106 18.778 24.5837 15.7045 24.5837 12.4998C24.5837 10.913 24.2711 9.34176 23.6639 7.87574C23.0566 6.40973 22.1666 5.07767 21.0445 3.95563C19.9225 2.83359 18.5904 1.94354 17.1244 1.33629C15.6584 0.729049 14.0871 0.416504 12.5003 0.416504C10.9135 0.416504 9.34225 0.729049 7.87623 1.33629C6.41022 1.94354 5.07816 2.83359 3.95612 3.95563C1.69005 6.22169 0.416992 9.29514 0.416992 12.4998C0.416992 17.6353 3.64324 22.0457 8.19866 23.7857C8.08991 22.8432 7.98116 21.2844 8.19866 20.209L9.58824 14.2398C9.58824 14.2398 9.23783 13.539 9.23783 12.4273C9.23783 10.7598 10.277 9.51525 11.4612 9.51525C12.5003 9.51525 12.9837 10.2765 12.9837 11.2553C12.9837 12.2944 12.2949 13.7807 11.9445 15.2065C11.7391 16.3907 12.5728 17.4298 13.7812 17.4298C15.932 17.4298 17.5995 15.134 17.5995 11.8957C17.5995 8.99567 15.5212 7.014 12.5366 7.014C9.12908 7.014 7.12324 9.5515 7.12324 12.2219C7.12324 13.2611 7.46158 14.3123 8.01741 15.0011C8.12616 15.0736 8.12616 15.1703 8.08991 15.3515L7.73949 16.6686C7.73949 16.874 7.60658 16.9465 7.40116 16.8015C5.85449 16.1248 4.96033 13.9257 4.96033 12.1494C4.96033 8.33109 7.66699 4.86317 12.887 4.86317C17.0437 4.86317 20.282 7.84775 20.282 11.8111C20.282 15.9678 17.7082 19.3028 14.0228 19.3028C12.8507 19.3028 11.7028 18.6744 11.292 17.9373L10.4824 20.8011C10.2045 21.8403 9.44324 23.2298 8.92366 24.0636V24.0273Z" fill="#25475D"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        <!-- LINKEDIN -->
+                            <li class="social__item">
+                                <a href="https://facebook.com" target="_blank" class="social__link">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.9583 0.625C20.5993 0.625 21.214 0.879612 21.6672 1.33283C22.1204 1.78604 22.375 2.40073 22.375 3.04167V19.9583C22.375 20.5993 22.1204 21.214 21.6672 21.6672C21.214 22.1204 20.5993 22.375 19.9583 22.375H3.04167C2.40073 22.375 1.78604 22.1204 1.33283 21.6672C0.879612 21.214 0.625 20.5993 0.625 19.9583V3.04167C0.625 2.40073 0.879612 1.78604 1.33283 1.33283C1.78604 0.879612 2.40073 0.625 3.04167 0.625H19.9583ZM19.3542 19.3542V12.95C19.3542 11.9053 18.9391 10.9033 18.2004 10.1646C17.4617 9.42585 16.4597 9.01083 15.415 9.01083C14.3879 9.01083 13.1917 9.63917 12.6117 10.5817V9.24042H9.24042V19.3542H12.6117V13.3971C12.6117 12.4667 13.3608 11.7054 14.2913 11.7054C14.7399 11.7054 15.1702 11.8836 15.4874 12.2009C15.8047 12.5181 15.9829 12.9484 15.9829 13.3971V19.3542H19.3542ZM5.31333 7.34333C5.85172 7.34333 6.36806 7.12946 6.74876 6.74876C7.12946 6.36806 7.34333 5.85172 7.34333 5.31333C7.34333 4.18958 6.43708 3.27125 5.31333 3.27125C4.77174 3.27125 4.25233 3.4864 3.86936 3.86936C3.4864 4.25233 3.27125 4.77174 3.27125 5.31333C3.27125 6.43708 4.18958 7.34333 5.31333 7.34333ZM6.99292 19.3542V9.24042H3.64583V19.3542H6.99292Z" fill="#25475D"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        <!-- GITHUB -->
+                            <li class="social__item">
+                                <a href="https://instagram.com" target="_blank" class="social__link">
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5003 0.416504C10.9135 0.416504 9.34225 0.729049 7.87623 1.33629C6.41022 1.94354 5.07816 2.83359 3.95612 3.95563C1.69005 6.2217 0.416992 9.29514 0.416992 12.4998C0.416992 17.8407 3.88491 22.3719 8.68199 23.979C9.28616 24.0757 9.47949 23.7011 9.47949 23.3748V21.3328C6.13241 22.0578 5.41949 19.7136 5.41949 19.7136C4.86366 18.3119 4.07824 17.9373 4.07824 17.9373C2.97866 17.1882 4.16283 17.2123 4.16283 17.2123C5.37116 17.2969 6.01158 18.4569 6.01158 18.4569C7.06283 20.2936 8.83908 19.7498 9.52782 19.4598C9.63657 18.6744 9.95074 18.1428 10.2891 17.8407C7.60658 17.5386 4.79116 16.4994 4.79116 11.8957C4.79116 10.5544 5.25033 9.479 6.03574 8.62109C5.91491 8.31901 5.49199 7.06234 6.15658 5.43109C6.15658 5.43109 7.17158 5.10484 9.47949 6.66359C10.4341 6.39775 11.4732 6.26484 12.5003 6.26484C13.5274 6.26484 14.5666 6.39775 15.5212 6.66359C17.8291 5.10484 18.8441 5.43109 18.8441 5.43109C19.5087 7.06234 19.0857 8.31901 18.9649 8.62109C19.7503 9.479 20.2095 10.5544 20.2095 11.8957C20.2095 16.5115 17.382 17.5265 14.6874 17.8286C15.1224 18.2032 15.5212 18.9403 15.5212 20.064V23.3748C15.5212 23.7011 15.7145 24.0878 16.3307 23.979C21.1278 22.3598 24.5837 17.8407 24.5837 12.4998C24.5837 10.913 24.2711 9.34176 23.6639 7.87575C23.0566 6.40973 22.1666 5.07767 21.0445 3.95563C19.9225 2.83359 18.5904 1.94354 17.1244 1.33629C15.6584 0.729049 14.0871 0.416504 12.5003 0.416504Z" fill="#25475D"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
         </section>
 
-
-        <!-- About -->
-        <section class="about">
-            <div class="about__inner">
-
-                <article class="about__container">
-                    
-                    <figure class="about__image">
-                        <img src="assets/images/test.jpg" alt="Me">
-                    </figure>
-                
-                    <div class="about__content">
-                        <header class="about__header">
-                            <h2 class="about__title">Om mig</h2>
-                        </header>
-                        <div class="about__text">
-                            <p>Lorem ipsum dolor sit amet consectetur. A nisi sed sit feugiat sit ac tellus in blandit. Neque ipsum mattis pulvinar nisl tristique donec. Nec nunc cursus scelerisque purus enim semper. Dui at neque suspendisse lacus. Fringilla a vel fringilla risus vel nulla eu turpis habitasse. Viverra nunc curabitur ipsum ullamcorper amet eget facilisi diam magna. 
-                                Penatibus nulla rutrum condimentum lectus aliquet sagittis velit. Imperdiet fermentum vivamus quis proin enim donec risus natoque. 
-                                <br>
-                                <br>
-                                Tempus pulvinar eu egestas netus in. Neque non viverra hac odio sed consequat mi nullam. Eleifend tortor volutpat sit pulvinar sed. Augue ornare integer suspendisse venenatis duis convallis sem luctus. Elementum ut ultricies dui vitae nisi tortor.</p>
+        <!-- PORTFOLIO -->
+        <section class="portfolio">
+            <div class="portfolio__inner">
+                <header class="portfolio__header">
+                    <h2 class="portfolio__title">Utvalda projekt</h2>
+                </header>
+                <div class="portfolio__content">
+                    <!-- work 1 -->
+                    <div class="work">
+                        <figure class="work__image">
+                            <img src="assets/images/candle-sken.jpg" alt="">
+                        </figure>
+                        <div class="work__content">
+                            <h3 class="work__title">Unleash Your Creativity</h3>
+                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
+                            <a href="" class="work__button">
+                                Läs projekt
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="#25475D"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
+                    <!-- work 2 -->
+                    <div class="work">
+                        <figure class="work__image">
+                            <img src="/assets/images/tulip-poster.jpg" alt="">
+                        </figure>
+                        <div class="work__content">
+                            <h3 class="work__title">Unleash Your Creativity</h3>
+                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
+                            <a href="" class="work__button">
+                                Läs projekt
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="#25475D"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- work 3 -->
+                    <div class="work">
+                        <figure class="work__image">
+                            <img src="assets/images/handcreme-belle.jpg" alt="">
+                        </figure>
+                        <div class="work__content">
+                            <h3 class="work__title">Unleash Your Creativity</h3>
+                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
+                            <a href="" class="work__button">
+                                Läs projekt
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="#25475D"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- work 4 -->
+                    <div class="work">
+                        <figure class="work__image">
+                            <img src="assets/images/orchid-et.jpg" alt="">
+                        </figure>
+                        <div class="work__content">
+                            <h3 class="work__title">Unleash Your Creativity</h3>
+                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
+                            <a href="" class="work__button">
+                                Läs projekt
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="#25475D"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- work 5 -->
+                    <div class="work">
+                        <figure class="work__image">
+                            <img src="assets/images/orchid-2.jpg" alt="">
+                        </figure>
+                        <div class="work__content">
+                            <h3 class="work__title">Unleash Your Creativity</h3>
+                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
+                            <a href="" class="work__button">
+                                Läs projekt
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="#25475D"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- work 6 -->
+                    <div class="work">
+                        <figure class="work__image"></figure>
+                        <div class="work__content">
+                            <h3 class="work__title">Unleash Your Creativity</h3>
+                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
+                            <a href="" class="work__button">
+                                Läs projekt
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="#25475D"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                </article>
+                <a href="" class="button">
+                    Se mer
+                    <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="white"/>
+                    </svg>
+                </a> 
 
             </div>
         </section>
@@ -132,7 +244,7 @@
                             </svg>
                         </div>
                         <h4>Webbdesign</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur. Duis volutpat dolor ultrices nunc quis augue morbi. Neque in et non malesuada sed varius risus. Eget vitae scelerisque.</p>
+                        <p>Jag sköter både webbdesign och programmering med responsiv tillgänglighet.</p>
                     </div>
     
                     <!-- 2 -->
@@ -143,7 +255,7 @@
                             </svg>
                         </div>
                         <h4>Grafisk design</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur. Duis volutpat dolor ultrices nunc quis augue morbi. Neque in et non malesuada sed varius risus. Eget vitae scelerisque.</p>
+                        <p>Med mina kreativa idéer hjälper jag gärna till från logotyp, poster, annons. formgivning och illustration</p>
                     </div>
     
                     <!-- 3 -->
@@ -175,89 +287,32 @@
             </div>
         </section>
 
-        <!-- PORTFOLIO -->
-        <section class="portfolio">
-            <div class="portfolio__inner">
-                <header class="portfolio__header">
-                    <h2 class="portfolio__title">Utvalda projekt</h2>
-                </header>
-                <div class="portfolio__content">
-                    <!-- work 1 -->
-                    <div class="work">
-                        <figure class="work__image">
-                            <img src="assets/images/candle-sken.jpg" alt="">
-                        </figure>
-                        <div class="work__content">
-                            <h3 class="work__title">Unleash Your Creativity</h3>
-                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
-                            <a href="" class="work__button">Läs mer</a>
-                        </div>
-                    </div>
-                    <!-- work 2 -->
-                    <div class="work">
-                        <figure class="work__image">
-                            <img src="/assets/images/tulip-poster.jpg" alt="">
-                        </figure>
-                        <div class="work__content">
-                            <h3 class="work__title">Unleash Your Creativity</h3>
-                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
-                            <a href="" class="work__button">Läs mer</a>
-                        </div>
-                    </div>
-                    <!-- work 3 -->
-                    <div class="work">
-                        <figure class="work__image">
-                            <img src="assets/images/handcreme-belle.jpg" alt="">
-                        </figure>
-                        <div class="work__content">
-                            <h3 class="work__title">Unleash Your Creativity</h3>
-                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
-                            <a href="" class="work__button">Läs mer</a>
-                        </div>
-                    </div>
-                    <!-- work 4 -->
-                    <div class="work">
-                        <figure class="work__image">
-                            <img src="assets/images/orchid-et.jpg" alt="">
-                        </figure>
-                        <div class="work__content">
-                            <h3 class="work__title">Unleash Your Creativity</h3>
-                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
-                            <a href="" class="work__button">Läs mer</a>
-                        </div>
-                    </div>
-                    <!-- work 5 -->
-                    <div class="work">
-                        <figure class="work__image">
-                            <img src="assets/images/orchid-2.jpg" alt="">
-                        </figure>
-                        <div class="work__content">
-                            <h3 class="work__title">Unleash Your Creativity</h3>
-                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
-                            <a href="" class="work__button">Läs mer</a>
-                        </div>
-                    </div>
-                    <!-- work 6 -->
-                    <div class="work">
-                        <figure class="work__image"></figure>
-                        <div class="work__content">
-                            <h3 class="work__title">Unleash Your Creativity</h3>
-                            <p class="work__excerpt">Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor.</p>
-                            <a href="" class="work__button">Läs mer</a>
-                        </div>
-                    </div>
-                </div>
 
-                <a href="" class="button">
-                    Se mer
-                    <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="white"/>
-                    </svg>
-                </a> 
+        <!-- About -->
+        <section class="about">
+            <div class="about__inner">
+
+                <article class="about__container">
+                    
+                    <figure class="about__image">
+                        <img src="assets/images/test.jpg" alt="Me">
+                    </figure>
+                
+                    <div class="about__content">
+                        <header class="about__header">
+                            <h2 class="about__title">Om mig</h2>
+                        </header>
+                        <div class="about__text">
+                            <p>Lorem ipsum dolor sit amet consectetur. A nisi sed sit feugiat sit ac tellus in blandit. Neque ipsum mattis pulvinar nisl tristique donec. Nec nunc cursus scelerisque purus enim semper. Dui at neque suspendisse lacus. Fringilla a vel fringilla risus vel nulla eu turpis habitasse. Viverra nunc curabitur ipsum ullamcorper amet eget facilisi diam magna. 
+                                Penatibus nulla rutrum condimentum lectus aliquet sagittis velit. Imperdiet fermentum vivamus quis proin enim donec risus natoque. 
+                        </div>
+                        <a href="" class="button">Linkedin</a>
+                    </div>
+
+                </article>
 
             </div>
         </section>
-
 
         <!-- Contact -->
         <section class="contact">
@@ -274,9 +329,9 @@
                         </div>
                         <a href="" class="button">
                             Kontakta mig
-                            <svg width="58" height="46" viewBox="0 0 58 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.33341 45.6667C4.77508 45.6667 3.44153 45.1123 2.33275 44.0035C1.22397 42.8947 0.668637 41.5602 0.666748 40V6.00001C0.666748 4.44168 1.22208 3.10812 2.33275 1.99934C3.44341 0.890565 4.77697 0.335232 6.33341 0.333344H51.6667C53.2251 0.333344 54.5596 0.888676 55.6702 1.99934C56.7809 3.11001 57.3353 4.44357 57.3334 6.00001V40C57.3334 41.5583 56.779 42.8928 55.6702 44.0035C54.5615 45.1142 53.227 45.6686 51.6667 45.6667H6.33341ZM29.0001 25.8333L51.6667 11.6667V6.00001L29.0001 20.1667L6.33341 6.00001V11.6667L29.0001 25.8333Z"/>
-                            </svg> 
+                            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.273 6.03026C13.4136 5.88962 13.4926 5.69889 13.4926 5.50001C13.4926 5.30114 13.4136 5.11041 13.273 4.96976L9.03025 0.727013C8.96106 0.65538 8.87831 0.598244 8.7868 0.558937C8.6953 0.51963 8.59689 0.49894 8.4973 0.498075C8.39772 0.49721 8.29896 0.516186 8.20678 0.553897C8.11461 0.591607 8.03087 0.647297 7.96045 0.717717C7.89003 0.788136 7.83434 0.871875 7.79663 0.964047C7.75892 1.05622 7.73995 1.15498 7.74081 1.25456C7.74168 1.35415 7.76237 1.45256 7.80167 1.54407C7.84098 1.63557 7.89812 1.71833 7.96975 1.78751L10.9322 4.75001L1 4.75001C0.801088 4.75001 0.610322 4.82903 0.469669 4.96968C0.329017 5.11034 0.25 5.3011 0.25 5.50001C0.25 5.69893 0.329017 5.88969 0.469669 6.03034C0.610322 6.171 0.801088 6.25001 1 6.25001L10.9322 6.25001L7.96975 9.21251C7.83313 9.35397 7.75754 9.54342 7.75924 9.74007C7.76095 9.93671 7.83983 10.1248 7.97889 10.2639C8.11794 10.4029 8.30605 10.4818 8.5027 10.4835C8.69935 10.4852 8.8888 10.4096 9.03025 10.273L13.273 6.03026Z" fill="white"/>
+                            </svg>
                         </a> 
                     </div>
 

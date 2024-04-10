@@ -23,6 +23,7 @@
     &__skills {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 5.125rem;
     }
 
@@ -33,7 +34,8 @@
 
         h4 {
             color: white;
-            padding-top: 2rem
+            padding-top: 2rem;
+            font-weight: 700;
         }
 
         p {

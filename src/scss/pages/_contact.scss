@@ -1,9 +1,12 @@
 @use '../components/buttons';
+@use '../utilities/responsive';
 
 .contact {
     display: grid;
     grid-template-columns: var(--grid-container);
     background-color: var(--color-ice);
+    background-image: url(assets/images/leaf.png);
+    background-size: cover;
     padding: 8rem 0 12.688rem 0;
 
     &__inner {
@@ -13,7 +16,12 @@
     &__container {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 10.75rem;
+
+        @include responsive.max(1024px) {
+            gap: 5rem;
+        }
     }
 
     &__content {
@@ -52,5 +60,21 @@
             background-color: var(--color-accent-hover);
         }
     }
+
+    &__image {
+
+        img {
+            height: 375px;
+            width: 316px;
+            max-width: fit-content;
+        }
+        @include responsive.max(1024px) {
+            //height: 12rem;
+            //width: 12rem;
+        }
+    }
     
+    @include responsive.max(1200px) {
+        background-position: bottom right;
+    }
 }
