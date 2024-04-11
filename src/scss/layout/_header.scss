@@ -5,7 +5,7 @@
 .site-header {
     @include layout.default;
     padding: 0;
-    height: 8rem;
+    height: 6rem;
     display: grid;
     align-items: center;
     position: fixed;
@@ -17,6 +17,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__logo {
+        width: 80px;
     }
 
     &__nav {

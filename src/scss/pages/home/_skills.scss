@@ -1,4 +1,5 @@
 @use '../../layout/layout';
+@use '../../utilities/responsive';
 
 .skills {
     @include layout.default;
@@ -23,8 +24,15 @@
     &__skills {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 5.125rem;
+        
+        @include responsive.max(1200px) {
+            gap: var(--section-gap-inner);
+        }
+
+        @include responsive.max(900px) {
+            flex-direction: column;
+        }
     }
 
     &__content {

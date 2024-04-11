@@ -11,10 +11,15 @@
     &__container {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 9.375rem;
 
         @include responsive.max(1200px) {
             gap: 3rem;
+        }
+
+        @include responsive.max(900px) {
+            flex-wrap: wrap;
         }
     }
 
@@ -30,9 +35,12 @@
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
         gap: var(--gap-content);
+
+        @include responsive.max(900px) {
+            align-items: center;
+        }
     }
 
     &__title {
@@ -47,6 +55,10 @@
         p {
             margin: 0;
             padding: 0;
+
+            @include responsive.max(900px) {
+                text-align: center;
+            }
         }
     }
 

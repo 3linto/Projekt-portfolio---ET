@@ -16,6 +16,7 @@
         left: -5rem;
 
         @include responsive.max(1024px) {
+            top: 0;
             left: 0;
         }
     }
@@ -34,6 +35,10 @@
             margin: 0;
             padding: 0;
         }
+    }
+
+    &__title {
+
     }
 
     &__description {

@@ -22,6 +22,11 @@
         @include responsive.max(1024px) {
             gap: 5rem;
         }
+
+        @include responsive.max(900px) {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
     }
 
     &__content {
@@ -66,7 +71,6 @@
         img {
             height: 375px;
             width: 316px;
-            max-width: fit-content;
         }
         @include responsive.max(1024px) {
             //height: 12rem;
