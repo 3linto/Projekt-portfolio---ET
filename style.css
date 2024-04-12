@@ -256,8 +256,9 @@ input[type=submit] {
 
 .menu-button {
   display: none;
-  grid-column: 3;
-  justify-self: end;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
   .menu-button {
@@ -265,29 +266,151 @@ input[type=submit] {
   }
 }
 
-.menu__list {
+.hamburger {
+  background-color: var(--color-ocean);
+  height: 3px;
+  width: 2rem;
+  position: relative;
+}
+.hamburger::before, .hamburger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-ocean);
+  left: 0;
+  top: -8px;
+  transition: top 0.2s 0.2s, transform 0.2s;
+}
+.hamburger::after {
+  top: 8px;
+}
+
+.menu-button.close .hamburger::before,
+.menu-button.close .hamburger::after {
+  top: 0;
+}
+
+.menu-button.close .hamburger::before {
+  transform: rotate(45deg);
+  transition: top 0.2s, transform 0.2s 0.2s;
+}
+
+.menu-button.close .hamburger::after {
+  transform: rotate(-45deg);
+  transition: top 0.2s, transform 0.2s 0.2s;
+}
+
+.menu-button.close .hamburger {
+  background-color: transparent;
+  transition: background-color 0s 0.2s;
+}
+
+/* FULL MENU */
+.full-menu {
+  position: fixed;
+  background-color: var(--color-light);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  padding: 8rem 0;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.full-menu .menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.full-menu .menu__item {
+  text-transform: uppercase;
+  transition: 0.2s;
+  position: relative;
+}
+.full-menu .menu__item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-ocean);
+  transform: scale(0);
+  transition: 0.3s ease;
+}
+.full-menu .menu__item:hover::before {
+  transform: scale(1);
+  height: 2.5px;
+}
+.full-menu .menu__link {
+  text-decoration: none;
+  color: #000;
+  font-size: var(--font-size-2);
+  color: var(--color-dark);
+  transition: color 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+  .full-menu .menu {
+    display: block;
+  }
+}
+
+.full-menu.open {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.site-header__nav .menu__list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   gap: 1.5rem;
 }
-.menu__item {
+.site-header__nav .menu__item {
   text-transform: uppercase;
+  transition: 0.2s;
+  position: relative;
 }
-.menu__item--current {
+.site-header__nav .menu__item--current {
   font-weight: 800;
   border-bottom: 3px solid var(--color-ocean);
 }
-.menu__item--current a {
+.site-header__nav .menu__item--current a {
   color: var(--color-ocean);
 }
-.menu__link {
+.site-header__nav .menu__item:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-ice);
+  transform: scale(0);
+  transition: 0.3s ease;
+}
+.site-header__nav .menu__item:hover::before {
+  transform: scale(1);
+  height: 2.5px;
+}
+.site-header__nav .menu__link {
   text-decoration: none;
-  color: #000;
+  color: var(--color-dark);
 }
 @media screen and (max-width: 1024px) {
-  .menu {
+  .site-header__nav .menu {
     display: none;
   }
 }
@@ -530,6 +653,14 @@ input[type=submit] {
   transform: translate(0, 100%);
   transition: transform 0.4s;
 }
+@media screen and (max-width: 1024px) {
+  .work__content {
+    position: unset;
+    backdrop-filter: unset;
+    background-color: none;
+    transform: none;
+  }
+}
 .work__title {
   margin: 0;
   max-width: 25rem;
@@ -554,7 +685,11 @@ input[type=submit] {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  border: 2px solid var(--color-ocean);
+}
+@media screen and (max-width: 1024px) {
+  .work {
+    overflow: visible;
+  }
 }
 
 .skills {
@@ -653,6 +788,11 @@ input[type=submit] {
   align-items: flex-start;
   gap: var(--gap-content);
 }
+@media screen and (max-width: 900px) {
+  .contact__content {
+    align-items: center;
+  }
+}
 .contact__title {
   border-bottom: 3px solid var(--color-sandy);
   position: relative;
@@ -664,6 +804,11 @@ input[type=submit] {
 .contact__text p {
   margin: 0;
   padding: 0;
+}
+@media screen and (max-width: 900px) {
+  .contact__text p {
+    text-align: center;
+  }
 }
 .contact .button {
   background-color: var(--color-rouge);
@@ -694,7 +839,7 @@ input[type=submit] {
 }
 @media screen and (max-width: 1200px) {
   .contact {
-    background-position: bottom right;
+    background-position: center;
   }
 }
 

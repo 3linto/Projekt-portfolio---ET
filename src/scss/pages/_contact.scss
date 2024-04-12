@@ -34,6 +34,10 @@
         flex-direction: column;
         align-items: flex-start;
         gap: var(--gap-content);
+
+        @include responsive.max(900px) {
+            align-items: center;
+        }
     }
 
     &__title {
@@ -48,6 +52,10 @@
         p {
             margin: 0;
             padding: 0;
+
+            @include responsive.max(900px) {
+                text-align: center;
+            }
         }
     }
 
@@ -79,6 +87,6 @@
     }
     
     @include responsive.max(1200px) {
-        background-position: bottom right;
+        background-position: center;
     }
 }
