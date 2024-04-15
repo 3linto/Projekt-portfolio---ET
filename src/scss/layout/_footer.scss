@@ -18,6 +18,11 @@
         .logo {
             position: absolute;
             top: -75px;
+
+            @include responsive.max(768px) {
+                width: 125px;
+                top: -62.5px;
+            }
         }
     }
 

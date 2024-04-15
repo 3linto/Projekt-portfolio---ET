@@ -4,6 +4,11 @@
 
 .portfolio {
     @include layout.default;
+    
+
+    @include responsive.max(640px) {
+        padding: 6rem 0 6rem 0;
+    }
 
     &__content {
         display: flex;
@@ -20,13 +25,24 @@
 
     &__header {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     &__title {
         border-bottom: 3px solid var(--color-sandy);
         position: relative;
         display: inline-flex;
+    }
+
+    &__text {
+
+        p {
+            margin: 0;
+            padding: var(--gap-content) 0 0;
+        }
     }
     
 
@@ -53,19 +69,17 @@
     overflow: hidden;
     position: relative;
 
-    &:hover {
-        .work__content {
-            transform: translate(0, 0);
-        }
+    @include responsive.max(390px) {
+        min-width: unset;
     }
-
+    
     &__image {
         background-color: var(--color-secondary-200);
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
-
+    
     &__content {
         display: flex;
         flex-direction: column;
@@ -77,43 +91,50 @@
         bottom: 0;
         right: 0;
         left: 0;
-        background-color: rgba(255 255 255 / 50%);
+        background-color: rgba(255 255 255 / 80%);
         backdrop-filter: blur(5px);
         padding: var(--padding-content);
-
+        
         // Transition of animation (x, y)
         transform: translate(0,100%);
         transition: transform 0.4s;
-
-
+        
+        
         @include responsive.max(1024px) {
             position: unset;
             backdrop-filter: unset;
-            background-color: none;
+            background-color: unset;
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
             transform: none;
         }
     }
-
+    
     &__title {
         margin: 0;
         max-width: 25rem;
         font-size: var(--font-size-2);
-        margin-bottom: 1rem;
+        margin-bottom: var(--gap-large);
         color: #000;
     }
-
+    
     &__excerpt {
         margin: 0;
         max-width: 25rem;
         color: var(--color-ocean);
-        margin-bottom: var(--gap-content);
+        margin-bottom: 1.5rem;
     }
-
+    
     &__button {
         @include buttons.secondary;
     }
+    
 
-
+    &:hover {
+        .work__content {
+            transform: translate(0, 0);
+        }
+    }
+    
     @include responsive.max(1024px) {
         overflow: visible;
     }

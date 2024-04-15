@@ -35,21 +35,30 @@
             margin: 0;
             padding: 0;
         }
-    }
 
-    &__title {
-
+        @include responsive.max(1024px) {
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__description {
         margin: 0;
         padding: 0;
+        max-width: 32rem;
         font-size: 1.5rem;
         color: var(--color-ocean);
+
+        @include responsive.max(640px) {
+            font-size: 20px;
+        }
     }
 
     @include responsive.max(1200px) {
         background-position: bottom right;
     }
 
+    @include responsive.max(640px) {
+        background-position: bottom right 5%;
+    }
 }

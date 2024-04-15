@@ -3,9 +3,10 @@
 
 .about {
     @include layout.default;
+    
 
-    &__inner {
-        grid-column: inner;
+    @include responsive.max(640px) {
+        padding: 6rem 0 6rem 0;
     }
 
     &__container {
@@ -14,21 +15,24 @@
         align-items: center;
         gap: 9.375rem;
 
-        @include responsive.max(1200px) {
-            gap: 3rem;
+        @include responsive.max(1024px) {
+            gap: var(--section-gap-inner);
         }
 
-        @include responsive.max(900px) {
+        @include responsive.max(768px) {
             flex-wrap: wrap;
         }
+        
     }
 
     &__image {
 
         img {
-            max-width: 438px;
-            height: auto;
-            object-fit: cover;
+            width: 438px;
+        }
+        
+        @include responsive.max(768px) {
+            order: 1;
         }
     }
 
@@ -38,7 +42,7 @@
         align-items: flex-start;
         gap: var(--gap-content);
 
-        @include responsive.max(900px) {
+        @include responsive.max(768px) {
             align-items: center;
         }
     }
@@ -56,7 +60,7 @@
             margin: 0;
             padding: 0;
 
-            @include responsive.max(900px) {
+            @include responsive.max(768px) {
                 text-align: center;
             }
         }
