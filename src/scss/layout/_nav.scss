@@ -47,7 +47,12 @@
     
         &__link {
             text-decoration: none;
-            color: var(--color-dark);
+            color: var(--color-ocean);
+            transition: .3s;
+
+            &:hover {
+                color: var(--color-accent-hover);
+            }
         }
     
         @include responsive.max(1024px) {

@@ -24,7 +24,6 @@
     &__content {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
         max-width: 50rem;
 
         .social-media {
@@ -44,7 +43,7 @@
 
     &__description {
         margin: 0;
-        padding: 0;
+        padding: 0 0 1rem 0;
         max-width: 32rem;
         font-size: 1.5rem;
         color: var(--color-ocean);
@@ -54,11 +53,20 @@
         }
     }
 
-    @include responsive.max(1200px) {
+    @include responsive.max(1250px) {
         background-position: bottom right;
     }
 
     @include responsive.max(640px) {
         background-position: bottom right 5%;
     }
+}
+
+.social__link svg {
+    fill: var(--color-ocean);
+    transition: fill 0.3s;
+}
+
+.social__link svg:hover {
+    fill: var(--color-rouge);
 }
