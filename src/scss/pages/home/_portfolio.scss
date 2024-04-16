@@ -126,6 +126,20 @@
     
     &__button {
         @include buttons.secondary;
+        transition: color .3s;
+
+        svg {
+            fill: var(--color-ocean);
+            transition: fill .3s;
+        }
+
+        &:hover {
+            color: var(--color-ocean-hover);
+
+            svg {
+                fill: var(--color-ocean-hover);
+            }
+        }
     }
     
 

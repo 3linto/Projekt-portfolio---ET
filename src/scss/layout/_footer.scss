@@ -35,6 +35,12 @@
         display: flex;
         justify-content: center;
         gap: 8rem;
+
+        @include responsive.max(768px) {
+            flex-direction: column;
+            align-items: center;
+            gap: var(--section-gap-inner);
+        }
     }
 
     &__bottom {
@@ -110,10 +116,4 @@
         }
     }
 
-
-    @include responsive.max(768px) {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--section-gap-inner);
-    }
 }
