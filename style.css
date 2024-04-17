@@ -253,6 +253,7 @@ input[type=submit] {
 @media screen and (max-width: 1024px) {
   .top-button {
     right: 2rem;
+    bottom: 2rem;
   }
 }
 .top-button--up {
@@ -633,6 +634,11 @@ input[type=submit] {
   margin: 0;
   padding: var(--gap-content) 0 0;
 }
+@media screen and (max-width: 768px) {
+  .portfolio__text {
+    max-width: 30rem;
+  }
+}
 .portfolio .button {
   background-color: var(--color-rouge);
   color: #fff;
@@ -697,7 +703,6 @@ input[type=submit] {
     position: unset;
     backdrop-filter: unset;
     background-color: unset;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
     transform: none;
   }
 }
@@ -710,9 +715,8 @@ input[type=submit] {
 }
 .work__excerpt {
   margin: 0;
-  max-width: 25rem;
   color: var(--color-ocean);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--gap-large);
 }
 .work__button {
   background-color: transparent;
@@ -737,12 +741,21 @@ input[type=submit] {
 .work__button:hover svg {
   fill: var(--color-ocean-hover);
 }
+@media screen and (max-width: 1024px) {
+  .work__button {
+    color: var(--color-ocean-hover);
+  }
+  .work__button svg {
+    fill: var(--color-ocean-hover);
+  }
+}
 .work:hover .work__content {
   transform: translate(0, 0);
 }
 @media screen and (max-width: 1024px) {
   .work {
     overflow: visible;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -792,12 +805,22 @@ input[type=submit] {
   padding-top: 2rem;
   font-weight: 700;
 }
+@media screen and (max-width: 1024px) {
+  .skills__content h4 {
+    padding-top: 1rem;
+  }
+}
 .skills__content p {
-  max-width: 20.375rem;
+  max-width: 24rem;
   text-align: center;
   color: var(--color-dull-blue);
 }
 @media screen and (max-width: 1024px) {
+  .skills__content p {
+    max-width: 46rem;
+  }
+}
+@media screen and (max-width: 768px) {
   .skills__content p {
     max-width: none;
   }
@@ -838,7 +861,7 @@ input[type=submit] {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10.75rem;
+  gap: var(--section-gap);
 }
 @media screen and (max-width: 1024px) {
   .contact__container {
@@ -868,7 +891,7 @@ input[type=submit] {
   display: inline-flex;
 }
 .contact__text {
-  max-width: 25.625rem;
+  max-width: 34rem;
 }
 .contact__text p {
   margin: 0;
@@ -877,6 +900,11 @@ input[type=submit] {
 @media screen and (max-width: 768px) {
   .contact__text p {
     text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contact__text {
+    max-width: 25rem;
   }
 }
 .contact .button {
@@ -928,7 +956,7 @@ input[type=submit] {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 9.375rem;
+  gap: var(--section-gap);
 }
 @media screen and (max-width: 1024px) {
   .about__container {
@@ -965,7 +993,7 @@ input[type=submit] {
   display: inline-flex;
 }
 .about__text {
-  max-width: 34.688rem;
+  max-width: 34rem;
 }
 .about__text p {
   margin: 0;

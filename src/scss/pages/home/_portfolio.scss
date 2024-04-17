@@ -43,6 +43,10 @@
             margin: 0;
             padding: var(--gap-content) 0 0;
         }
+
+        @include responsive.max(768px) {
+            max-width: 30rem;
+        }
     }
     
 
@@ -104,7 +108,6 @@
             position: unset;
             backdrop-filter: unset;
             background-color: unset;
-            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
             transform: none;
         }
     }
@@ -119,9 +122,8 @@
     
     &__excerpt {
         margin: 0;
-        max-width: 25rem;
         color: var(--color-ocean);
-        margin-bottom: 1.5rem;
+        margin-bottom: var(--gap-large);
     }
     
     &__button {
@@ -140,6 +142,14 @@
                 fill: var(--color-ocean-hover);
             }
         }
+
+        @include responsive.max(1024px) {
+            color: var(--color-ocean-hover);
+
+            svg {
+                fill: var(--color-ocean-hover);
+            }
+        }
     }
     
 
@@ -151,5 +161,6 @@
     
     @include responsive.max(1024px) {
         overflow: visible;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
     }
 }

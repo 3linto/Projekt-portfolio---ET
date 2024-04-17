@@ -73,6 +73,7 @@
 
     @include responsive.max(1024px) {
         right: 2rem;
+        bottom: 2rem;
     }
 
     &--up {

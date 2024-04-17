@@ -13,7 +13,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 9.375rem;
+        gap: var(--section-gap);
 
         @include responsive.max(1024px) {
             gap: var(--section-gap-inner);
@@ -54,7 +54,7 @@
     }
 
     &__text {
-        max-width: 34.688rem;
+        max-width: 34rem;
         
         p {
             margin: 0;
