@@ -4,7 +4,6 @@
 
 .portfolio {
     @include layout.default;
-    //overflow-y: scroll;  note: onepage
     
 
     @include responsive.max(640px) {
