@@ -1,4 +1,4 @@
-# scss-base-2024
+# Elin Thebrin - Portfolio #
 
 ## Development
 ``sass --watch src/scss/style.scss style.css``
