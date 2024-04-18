@@ -4,6 +4,7 @@
 
 .portfolio {
     @include layout.default;
+    //overflow-y: scroll;  note: onepage
     
 
     @include responsive.max(640px) {
@@ -129,6 +130,7 @@
     &__button {
         @include buttons.secondary;
         transition: color .3s;
+        text-decoration: underline 1px;
 
         svg {
             fill: var(--color-ocean);

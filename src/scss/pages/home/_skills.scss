@@ -4,6 +4,7 @@
 .skills {
     @include layout.default;
     background-color: var(--color-ocean);
+    //overflow-y: scroll;  note: onepage
     
 
     @include responsive.max(640px) {
