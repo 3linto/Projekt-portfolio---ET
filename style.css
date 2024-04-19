@@ -246,8 +246,6 @@ input[type=submit] {
   transition: 0.2s;
 }
 .top-button svg {
-  background-color: var(--color-ice);
-  border: 1px solid var(--color-ice);
   border-radius: 100%;
 }
 @media screen and (max-width: 1024px) {
